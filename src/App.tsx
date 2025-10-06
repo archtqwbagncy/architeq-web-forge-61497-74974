@@ -13,7 +13,7 @@ import WebDesign from "./pages/WebDesign";
 import SaaSServices from "./pages/SaaSServices";
 import SaaS from "./pages/SaaS";
 import ClientShowcase from "./pages/ClientShowcase";
-import Portfolio from "./pages/Portfolio";
+
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -49,7 +49,7 @@ const App = () => (
                 <Route path="/services/saas-development" element={<SaaSServices />} />
                 <Route path="/saas" element={<SaaS />} />
                 <Route path="/clients" element={<ClientShowcase />} />
-                <Route path="/portfolio" element={<Portfolio />} />
+                
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<NotFound />} />
