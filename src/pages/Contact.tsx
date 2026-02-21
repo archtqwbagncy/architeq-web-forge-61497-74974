@@ -338,13 +338,13 @@ const Contact = () => {
               </Card>
               <Card>
                 <CardContent className="p-6">
-                  <div className="text-3xl font-bold text-primary mb-2">&lt; 24 Hours</div>
+                  <div className="text-3xl font-bold text-primary mb-2">&lt; 1 Hour</div>
                   <p className="text-sm">Email Response</p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="p-6">
-                  <div className="text-3xl font-bold text-primary mb-2">&lt; 48 Hours</div>
+                  <div className="text-3xl font-bold text-primary mb-2">&lt; 24 Hours</div>
                   <p className="text-sm">Project Proposal</p>
                 </CardContent>
               </Card>

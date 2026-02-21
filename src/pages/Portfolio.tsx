@@ -104,18 +104,18 @@ const Portfolio = () => {
                 className="overflow-hidden hover-lift animate-fade-in-up group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative overflow-hidden">
+                <div className="overflow-hidden">
                   <img
                     src={project.image}
                     alt={`${project.name} website screenshot`}
                     className="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <Badge className="absolute top-4 left-4 bg-background/90 text-foreground border">
-                    {project.category}
-                  </Badge>
                 </div>
                 <CardContent className="p-6">
+                  <Badge className="mb-3 bg-primary/10 text-primary border-primary/20">
+                    {project.category}
+                  </Badge>
                   <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
                   <p className="text-sm text-muted-foreground mb-4">
                     {project.description}
