@@ -9,7 +9,7 @@ const About = () => {
     {
       icon: <Calendar className="h-8 w-8 text-primary" />,
       title: "Speed & Efficiency",
-      description: "We deliver websites in 7 days and SaaS products in 4-5 weeks, without compromising quality."
+      description: "We deliver websites in 7 days, without compromising quality."
     },
     {
       icon: <Users className="h-8 w-8 text-primary" />,
@@ -36,8 +36,8 @@ const About = () => {
     },
     {
       year: "2024",
-      title: "SaaS Expansion",
-      description: "Expanded services to include custom SaaS development using no-code platforms."
+      title: "Service Expansion",
+      description: "Expanded services and grew our client base across multiple industries."
     },
     {
       year: "2025",
@@ -48,7 +48,7 @@ const About = () => {
 
   const services = [
     "Website Design & Development",
-    "SaaS Product Development", 
+    "Custom Web Applications", 
     "E-commerce Solutions",
     "Mobile-First Design",
     "SEO Optimization",
@@ -100,7 +100,7 @@ const About = () => {
                   That's why we built Architeq around no-code technology and rapid delivery. We believe every business deserves a professional online presence without the traditional headaches of web development.
                 </p>
                 <p>
-                  Today, we've helped over 100 businesses transform their online presence, delivering websites in 7 days and SaaS products in 4-5 weeks. Our clients love the speed, quality, and affordability we bring to every project.
+                  Today, we've helped over 100 businesses transform their online presence, delivering websites in 7 days. Our clients love the speed, quality, and affordability we bring to every project.
                 </p>
               </div>
             </div>

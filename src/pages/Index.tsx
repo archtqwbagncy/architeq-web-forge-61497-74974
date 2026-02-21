@@ -25,7 +25,7 @@ const Index = () => {
   const packages = [
     {
       name: "Essential",
-      price: "R1,500",
+      price: "R2,000",
       description: "Perfect for getting started",
       features: ["Single Page Website", "Mobile Responsive", "Google Business Profile", "Contact Form"]
     },
@@ -44,7 +44,7 @@ const Index = () => {
     },
     {
       name: "Enterprise",
-      price: "R15,000",
+      price: "R15,000+",
       description: "For growing businesses",
       features: ["Unlimited Pages", "E-commerce & Analytics", "Priority Support", "Custom Features"]
     }
