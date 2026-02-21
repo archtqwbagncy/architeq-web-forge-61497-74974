@@ -120,7 +120,7 @@ const Contact = () => {
       answer: "Absolutely. We can redesign, optimize, or add new features to your current website."
     },
     {
-      question: "What's included in the SaaS development?",
+      question: "What's included in custom web applications?",
       answer: "Full application development, user management, payment integration, and hosting setup."
     }
   ];
@@ -214,7 +214,7 @@ const Contact = () => {
                       <SelectContent>
                         <SelectItem value="discovery-call">Book Discovery Call</SelectItem>
                         <SelectItem value="website">Website Design & Development</SelectItem>
-                        <SelectItem value="saas">SaaS Development</SelectItem>
+                        <SelectItem value="web-app">Custom Web Application</SelectItem>
                         <SelectItem value="redesign">Website Redesign</SelectItem>
                         <SelectItem value="ecommerce">E-commerce Store</SelectItem>
                         <SelectItem value="other">Other</SelectItem>

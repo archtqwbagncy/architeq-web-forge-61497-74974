@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Globe, Rocket, Zap } from "lucide-react";
+import { ArrowRight, Globe, Zap } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -12,17 +12,9 @@ const Services = () => {
       title: "Web Design Services",
       description: "Professional websites delivered in 7 days",
       features: ["5-15 Pages", "Mobile Responsive", "SEO Optimized", "Fast Delivery"],
-      startingPrice: "R5,000",
+      startingPrice: "R2,000",
       link: "/services/web-design",
       icon: <Globe className="h-8 w-8 text-primary" />
-    },
-    {
-      title: "SaaS Development",
-      description: "MVP development in 4-5 weeks",
-      features: ["Web/Mobile App", "Modern Tech Stack", "Scalable Architecture", "Full Support"],
-      startingPrice: "R13,000",
-      link: "/services/saas-development",
-      icon: <Rocket className="h-8 w-8 text-primary" />
     }
   ];
 
@@ -40,7 +32,7 @@ const Services = () => {
               Complete <span className="gradient-text">Digital Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              From professional websites to complete SaaS applications - we deliver high-quality digital solutions tailored to your business needs.
+              We deliver high-quality web design solutions tailored to your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-primary hover:bg-primary/90">
@@ -66,7 +58,7 @@ const Services = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="max-w-lg mx-auto">
             {services.map((service, index) => (
               <Card key={index} className="hover-lift animate-scale-in" style={{animationDelay: `${index * 200}ms`}}>
                 <CardHeader className="text-center">

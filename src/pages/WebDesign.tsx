@@ -10,7 +10,7 @@ const WebDesign = () => {
   const packages = [
     {
       name: "Essential Single Page",
-      price: "R1,500",
+      price: "R2,000",
       description: "Perfect for getting started with a professional online presence",
       features: [
         "Single Page Website",
@@ -52,7 +52,7 @@ const WebDesign = () => {
     },
     {
       name: "Enterprise Custom Solution",
-      price: "R15,000",
+      price: "R15,000+",
       description: "Complete solution for established businesses",
       features: [
         "Unlimited Pages",

@@ -4,14 +4,13 @@ import { useTheme } from "@/components/ThemeProvider";
 
 const Footer = () => {
   const { theme } = useTheme();
+  const currentYear = new Date().getFullYear();
 
-  // Determine which logo to use based on theme
   const logoSrc = theme === "dark" ? "/logo-dark.png" : "/logo-light.png";
 
   return <footer className="bg-muted/50 border-t">
       <div className="container mx-auto px-4 lg:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo & Description */}
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <img 
@@ -23,24 +22,22 @@ const Footer = () => {
             </Link>
             <p className="text-muted-foreground max-w-md">
               Transform your online presence with professional, fast, and affordable web solutions. 
-              We deliver websites in 7 days and SaaS products in 4-5 weeks.
+              We deliver websites in 7 days.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
               <li><Link to="/services" className="hover:text-primary transition-colors">Services</Link></li>
-              <li><Link to="/saas" className="hover:text-primary transition-colors">SaaS Development</Link></li>
+              <li><Link to="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link></li>
               <li><Link to="/about" className="hover:text-primary transition-colors">About</Link></li>
               <li><Link to="/clients" className="hover:text-primary transition-colors">Our Clients</Link></li>
               <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
@@ -69,7 +66,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2025 Architeq Web Agency. All rights reserved.</p>
+          <p>© {currentYear} Architeq Web Agency. All rights reserved.</p>
         </div>
       </div>
     </footer>;
