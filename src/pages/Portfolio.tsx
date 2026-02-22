@@ -114,11 +114,11 @@ const Portfolio = () => {
                 className="overflow-hidden hover-lift animate-fade-in-up group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="overflow-hidden">
+                <div className="overflow-hidden bg-muted/30">
                   <img
                     src={project.image}
                     alt={`${project.name} website screenshot`}
-                    className="w-full aspect-[4/3] object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    className="w-full object-contain object-top transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>
