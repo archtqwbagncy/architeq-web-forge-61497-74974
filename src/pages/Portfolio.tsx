@@ -128,8 +128,8 @@ const Portfolio = () => {
                   </Badge>
                   <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
                   <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <span>⏱ {project.timeline}</span>
-                    <span>💰 {project.cost}</span>
+                    <span>Timeline: {project.timeline}</span>
+                    <span>Cost: {project.cost}</span>
                   </div>
                 </CardContent>
               </Card>
