@@ -106,10 +106,10 @@ const Services = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {[
-                { name: "Essential Single Page", price: "R2,000", delivery: "3-5 Days", features: ["Single Page Website", "Mobile Responsive", "Google Business Profile", "Contact Form"] },
-                { name: "Starter Business", price: "R5,000", delivery: "5-7 Days", features: ["5 Pages", "Mobile Responsive", "Contact Form", "Basic SEO Setup", "1 Month Support"] },
-                { name: "Professional Growth", price: "R10,000", delivery: "7-10 Days", popular: true, features: ["10 Pages", "Blog Setup", "Advanced SEO", "Social Media Integration", "3 Months Support", "CMS"] },
-                { name: "Enterprise Custom", price: "R15,000+", delivery: "10-14 Days", features: ["Unlimited Pages", "E-commerce Integration", "Advanced Analytics", "Priority Support", "6 Months Support"] },
+                { name: "Essential Single Page", price: "R2,000", delivery: "1-2 Days", features: ["Single Page Website", "Mobile Responsive", "Google Business Profile", "Contact Form"] },
+                { name: "Starter Business", price: "R5,000", delivery: "3-4 Days", features: ["5 Pages", "Mobile Responsive", "Contact Form", "Basic SEO Setup", "1 Month Support"] },
+                { name: "Professional Growth", price: "R10,000", delivery: "5-7 Days", popular: true, features: ["10 Pages", "Blog Setup", "Advanced SEO", "Social Media Integration", "3 Months Support", "CMS"] },
+                { name: "Enterprise Custom", price: "R15,000+", delivery: "7-10 Days", features: ["Unlimited Pages", "E-commerce Integration", "Advanced Analytics", "Priority Support", "6 Months Support"] },
               ].map((pkg, index) => (
                 <Card key={index} className={`hover-lift animate-fade-in-up relative ${pkg.popular ? 'border-primary shadow-lg' : ''}`} style={{ animationDelay: `${index * 100}ms` }}>
                   {pkg.popular && (
@@ -136,6 +136,46 @@ const Services = () => {
                 </Card>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Website Maintenance Packages */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 lg:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Website Maintenance Packages</h2>
+            <p className="text-xl text-muted-foreground">Keep your website running smoothly with our maintenance plans</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { name: "Basic", price: "R1,500/month", features: ["Security Updates", "Monthly Backups", "Bug Fixes", "Email Support"] },
+              { name: "Standard", price: "R3,000/month", popular: true, features: ["Everything in Basic", "Content Updates", "Performance Monitoring", "Priority Support", "Weekly Backups"] },
+              { name: "Premium", price: "R5,000/month", features: ["Everything in Standard", "SEO Monitoring", "Analytics Reports", "24/7 Support", "Daily Backups", "Feature Enhancements"] },
+            ].map((pkg, index) => (
+              <Card key={index} className={`hover-lift animate-fade-in-up relative ${pkg.popular ? 'border-primary shadow-lg' : ''}`} style={{ animationDelay: `${index * 100}ms` }}>
+                {pkg.popular && (
+                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary">Most Popular</Badge>
+                )}
+                <CardHeader className="text-center pb-2">
+                  <CardTitle className="text-lg">{pkg.name}</CardTitle>
+                  <div className="text-2xl font-bold text-primary">{pkg.price}</div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {pkg.features.map((f, i) => (
+                      <li key={i} className="flex items-center text-sm">
+                        <Check className="h-3 w-3 text-primary mr-2 flex-shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className="w-full mt-4" size="sm" variant={pkg.popular ? "default" : "outline"} asChild>
+                    <Link to="/contact">Get Started</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
