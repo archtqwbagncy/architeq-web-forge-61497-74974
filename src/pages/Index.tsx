@@ -74,7 +74,7 @@ const Index = () => {
             <div className="animate-fade-in">
               <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
                 <Zap className="h-4 w-4 mr-2 text-primary" />
-                Transform in 7 days, not months
+                Build Faster. Launch Smarter. Scale Immediately.
               </Badge>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Transform Your Online Presence in{" "}

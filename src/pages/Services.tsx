@@ -17,11 +17,19 @@ const Services = () => {
       icon: <Globe className="h-8 w-8 text-primary" />
     },
     {
+      title: "Google Business Profile",
+      description: "Get found on Google Maps & Search",
+      features: ["Profile Setup & Optimization", "Google Maps Listing", "Review Management", "Local SEO Boost"],
+      startingPrice: "Included",
+      link: "/contact",
+      icon: <Zap className="h-8 w-8 text-primary" />
+    },
+    {
       title: "Website Maintenance",
       description: "Keep your website running smoothly",
       features: ["Security Updates", "Bug Fixes", "Performance Monitoring", "Content Updates"],
       startingPrice: "R1,500/month",
-      link: "/services/web-design",
+      link: "/contact",
       icon: <Settings className="h-8 w-8 text-primary" />
     }
   ];
@@ -66,7 +74,7 @@ const Services = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {services.map((service, index) => (
               <Card key={index} className="hover-lift animate-scale-in" style={{animationDelay: `${index * 200}ms`}}>
                 <CardHeader className="text-center">

@@ -18,7 +18,7 @@ const WebDesign = () => {
         "Google Business Profile",
         "Contact Form"
       ],
-      deliveryTime: "3-5 Days"
+      deliveryTime: "1-2 Days"
     },
     {
       name: "Starter Business Website",
@@ -32,7 +32,7 @@ const WebDesign = () => {
         "Basic SEO Setup",
         "1 Month Support"
       ],
-      deliveryTime: "5-7 Days"
+      deliveryTime: "3-4 Days"
     },
     {
       name: "Professional Growth Website",
@@ -47,7 +47,7 @@ const WebDesign = () => {
         "3 Months Support",
         "Content Management System"
       ],
-      deliveryTime: "7-10 Days",
+      deliveryTime: "5-7 Days",
       popular: true
     },
     {
@@ -63,7 +63,7 @@ const WebDesign = () => {
         "6 Months Support",
         "Performance Optimization"
       ],
-      deliveryTime: "10-14 Days"
+      deliveryTime: "7-10 Days"
     }
   ];
 
