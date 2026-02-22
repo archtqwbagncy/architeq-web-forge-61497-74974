@@ -13,61 +13,71 @@ const Portfolio = () => {
       name: "H & N House of Beauty",
       image: "/portfolio/hn-house-of-beauty.png",
       category: "Beauty & Wellness",
-      description: "Additional context coming soon.",
+      timeline: "3 days",
+      cost: "R5,000",
     },
     {
       name: "Dr Maise T",
       image: "/portfolio/dr-maise-t.png",
       category: "Healthcare",
-      description: "Additional context coming soon.",
+      timeline: "2 days",
+      cost: "R2,000",
     },
     {
       name: "Lumavu Trading Enterprises",
       image: "/portfolio/lumavu-trading.png",
       category: "Construction",
-      description: "Additional context coming soon.",
+      timeline: "4 days",
+      cost: "R5,000",
     },
     {
       name: "Home of Accounting Consulting",
       image: "/portfolio/hac-accounting.png",
       category: "Finance",
-      description: "Additional context coming soon.",
+      timeline: "2 days",
+      cost: "R5,000",
     },
     {
       name: "GT Testing Civil & Construction",
       image: "/portfolio/gt-testing.png",
       category: "Construction & Testing",
-      description: "Additional context coming soon.",
+      timeline: "3 days",
+      cost: "R5,000",
     },
     {
       name: "BlueEdge Designs",
       image: "/portfolio/blueedge-designs.png",
       category: "Design Agency",
-      description: "Additional context coming soon.",
+      timeline: "1 day",
+      cost: "R2,000",
     },
     {
       name: "KTL Makeup Glam",
       image: "/portfolio/ktl-makeup-glam.png",
       category: "Beauty & Makeup",
-      description: "Additional context coming soon.",
+      timeline: "1 day",
+      cost: "R2,500 (custom request)",
     },
     {
       name: "Katthales Holdings",
       image: "/portfolio/katthales-holdings.png",
       category: "Cleaning Services",
-      description: "Additional context coming soon.",
+      timeline: "3 days",
+      cost: "R5,000",
     },
     {
       name: "MusicEar",
       image: "/portfolio/musicear.png",
       category: "Entertainment & Events",
-      description: "Additional context coming soon.",
+      timeline: "1 day",
+      cost: "R2,000",
     },
     {
       name: "Netshifhefhe Attorneys",
       image: "/portfolio/netshifhefhe-attorneys.png",
       category: "Legal Services",
-      description: "Additional context coming soon.",
+      timeline: "4 days",
+      cost: "R7,000 (custom request)",
     },
   ];
 
@@ -108,7 +118,7 @@ const Portfolio = () => {
                   <img
                     src={project.image}
                     alt={`${project.name} website screenshot`}
-                    className="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    className="w-full aspect-[4/3] object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>
@@ -117,9 +127,10 @@ const Portfolio = () => {
                     {project.category}
                   </Badge>
                   <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {project.description}
-                  </p>
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                    <span>⏱ {project.timeline}</span>
+                    <span>💰 {project.cost}</span>
+                  </div>
                 </CardContent>
               </Card>
             ))}
