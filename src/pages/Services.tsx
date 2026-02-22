@@ -20,7 +20,7 @@ const Services = () => {
       title: "Google Business Profile",
       description: "Get found on Google Maps & Search",
       features: ["Profile Setup & Optimization", "Google Maps Listing", "Review Management", "Local SEO Boost"],
-      startingPrice: "Included",
+      startingPrice: "R750",
       link: "/contact",
       icon: <Zap className="h-8 w-8 text-primary" />
     },
