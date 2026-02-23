@@ -148,7 +148,7 @@ const ClientShowcase = () => {
             
             <Card className="text-center animate-scale-in" style={{animationDelay: "200ms"}}>
               <CardContent className="p-6">
-                <div className="text-4xl font-bold text-primary mb-2">14</div>
+                <div className="text-4xl font-bold text-primary mb-2">7</div>
                 <div className="text-sm text-muted-foreground">Days Average Delivery</div>
               </CardContent>
             </Card>
