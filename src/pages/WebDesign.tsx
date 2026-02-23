@@ -100,7 +100,7 @@ const WebDesign = () => {
   const whyChooseUs = [
     {
       icon: <Calendar className="h-8 w-8 text-primary" />,
-      title: "Delivered in 7 Days",
+      title: "Delivered Within 7 Days",
       description: "Fast turnaround without compromising quality"
     },
     {
@@ -128,7 +128,7 @@ const WebDesign = () => {
           <div className="text-center max-w-4xl mx-auto animate-fade-in">
             <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
               <Zap className="h-4 w-4 mr-2 text-primary" />
-              Professional websites in 7 days
+              Professional websites within 7 days
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Professional <span className="gradient-text">Web Design</span> Services

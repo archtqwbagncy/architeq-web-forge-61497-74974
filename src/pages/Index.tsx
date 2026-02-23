@@ -77,7 +77,7 @@ const Index = () => {
                 Build Faster. Launch Smarter. Scale Immediately.
               </Badge>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Transform Your Online Presence in{" "}
+                Transform Your Online Presence Within{" "}
                 <span className="gradient-text">7 Days</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8">

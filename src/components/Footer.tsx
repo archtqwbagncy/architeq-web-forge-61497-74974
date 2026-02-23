@@ -22,7 +22,7 @@ const Footer = () => {
             </Link>
             <p className="text-muted-foreground max-w-md">
               Transform your online presence with professional, fast, and affordable web solutions. 
-              We deliver websites in 7 days.
+              We deliver and launch websites within 7 days.
             </p>
           </div>
 
