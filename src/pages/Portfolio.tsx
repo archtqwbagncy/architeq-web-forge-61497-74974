@@ -118,7 +118,7 @@ const Portfolio = () => {
                   <img
                     src={project.image}
                     alt={`${project.name} website screenshot`}
-                    className="w-full object-contain object-top transition-transform duration-500 group-hover:scale-105"
+                    className="w-full max-h-[400px] object-contain object-top transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>
@@ -128,8 +128,8 @@ const Portfolio = () => {
                   </Badge>
                   <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
                   <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <span>Timeline: {project.timeline}</span>
-                    <span>Cost: {project.cost}</span>
+                    <span><strong>Timeline:</strong> {project.timeline}</span>
+                    <span><strong>Cost:</strong> {project.cost}</span>
                   </div>
                 </CardContent>
               </Card>

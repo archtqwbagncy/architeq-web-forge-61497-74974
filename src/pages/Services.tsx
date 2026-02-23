@@ -10,7 +10,7 @@ const Services = () => {
   const services = [
     {
       title: "Web Design Services",
-      description: "Professional websites delivered in 7 days",
+      description: "Professional websites delivered within 7 days",
       features: ["5-15 Pages", "Mobile Responsive", "SEO Optimized", "Fast Delivery"],
       startingPrice: "R2,000",
       link: "/services/web-design",

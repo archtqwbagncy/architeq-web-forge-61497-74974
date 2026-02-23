@@ -9,7 +9,7 @@ const About = () => {
     {
       icon: <Calendar className="h-8 w-8 text-primary" />,
       title: "Speed & Efficiency",
-      description: "We deliver websites in 7 days, without compromising quality."
+      description: "We deliver and launch websites within 7 days, without compromising quality."
     },
     {
       icon: <Users className="h-8 w-8 text-primary" />,
@@ -100,7 +100,7 @@ const About = () => {
                   That's why we built Architeq around no-code technology and rapid delivery. We believe every business deserves a professional online presence without the traditional headaches of web development.
                 </p>
                 <p>
-                  Today, we've helped over 100 businesses transform their online presence, delivering websites in 7 days. Our clients love the speed, quality, and affordability we bring to every project.
+                  Today, we've helped over 100 businesses transform their online presence, delivering and launching websites within 7 days. Our clients love the speed, quality, and affordability we bring to every project.
                 </p>
               </div>
             </div>
