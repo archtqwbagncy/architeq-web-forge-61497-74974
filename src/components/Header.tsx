@@ -36,8 +36,8 @@ const Header = () => {
             <img 
               src={logoSrc}
               alt="Architeq Web Agency" 
-              className="h-8 w-auto object-contain"
-              style={{ maxWidth: '180px' }}
+              className="h-12 w-auto object-contain"
+              style={{ maxWidth: '220px' }}
             />
           </Link>
 
