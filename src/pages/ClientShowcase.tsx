@@ -11,9 +11,9 @@ const ClientShowcase = () => {
   ];
 
   const testimonials = [
-    { quote: "Architeq delivered our website in just 5 days. The quality exceeded our expectations and we couldn't be happier with the results. Highly recommend!", author: "Thabo Nkosi", role: "CEO", rating: 5 },
-    { quote: "Fast, professional, and affordable. The team understood our vision perfectly and delivered exactly what we needed for our business.", author: "Lerato Molefe", role: "Owner", rating: 5 },
-    { quote: "The platform they built for us launched in just 4 weeks. Incredible speed and quality. Our customers love the user experience.", author: "Pieter van der Merwe", role: "Founder", rating: 5 }
+    { quote: "They built our first website 3 years ago and built our new one now. Seamless procedure, always a phone call away and beautiful work as always. Definitely the best around.", author: "H & N House of Beauty", role: "Client", rating: 5 },
+    { quote: "I had such a great experience with Architeq. They made the whole process of building my website super easy and enjoyable, and the final result looks amazing. The site is clean, simple to use, and exactly what I wanted.", author: "Kebogile Mokgoebo", role: "Client", rating: 5 },
+    { quote: "Best services and a Great Web Agency I can recommend. I've gotten the best service and the best outcome, everything running smoothly to the tea.", author: "PHILLY JAROAM", role: "Client", rating: 5 }
   ];
 
   return (
