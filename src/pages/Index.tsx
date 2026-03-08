@@ -92,16 +92,6 @@ const Index = () => {
               </Button>
             </div>
           </div>
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto mt-16">
-            <div></div>
-            <div className="animate-fade-in lg:block hidden" style={{animationDelay: "200ms"}}>
-              <img 
-                src={heroPhone} 
-                alt="Modern website design showcase" 
-                className="w-full h-auto object-contain drop-shadow-2xl"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
