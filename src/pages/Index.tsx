@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, ArrowRight, Zap } from "lucide-react";
-import heroDevices from "@/assets/hero-devices.png";
+import heroPhone from "@/assets/hero-phone.png";
 
 const Index = () => {
   const problems = [
@@ -83,7 +83,7 @@ const Index = () => {
             <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto font-light">
               Get a professional, fast, high-converting website — fully optimised for every device.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-primary hover:bg-primary/90 rounded-full px-8 h-12 text-base">
                 <Link to="/contact">Get A Free Quote</Link>
               </Button>
@@ -92,13 +92,15 @@ const Index = () => {
               </Button>
             </div>
           </div>
-          {/* Devices hero image - Apple style full width */}
-          <div className="max-w-6xl mx-auto animate-fade-in" style={{ animationDelay: "300ms" }}>
-            <img 
-              src={heroDevices} 
-              alt="Website designs showcased on iPhone 16, iPad, and MacBook — fully optimised for every device" 
-              className="w-full h-auto object-contain drop-shadow-2xl"
-            />
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto mt-16">
+            <div></div>
+            <div className="animate-fade-in lg:block hidden" style={{animationDelay: "200ms"}}>
+              <img 
+                src={heroPhone} 
+                alt="Modern website design showcase" 
+                className="w-full h-auto object-contain drop-shadow-2xl"
+              />
+            </div>
           </div>
         </div>
       </section>
