@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, ArrowRight, Users, Calendar, Settings, Zap } from "lucide-react";
-import heroPhone from "@/assets/hero-phone.png";
+import { Check, ArrowRight, Zap } from "lucide-react";
+import heroDevices from "@/assets/hero-devices.png";
 
 const Index = () => {
   const problems = [
@@ -67,159 +67,151 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="hero-gradient py-20 lg:py-32">
+      {/* Hero Section - Apple style centered */}
+      <section className="hero-gradient py-24 lg:py-40">
         <div className="container mx-auto px-4 lg:px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-            <div className="animate-fade-in">
-              <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
-                <Zap className="h-4 w-4 mr-2 text-primary" />
-                Build Faster. Launch Smarter. Scale Immediately.
-              </Badge>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Transform Your Online Presence Within{" "}
-                <span className="gradient-text">7 Days</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-                Get a professional, fast, high-converting website — without code.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" asChild className="bg-primary hover:bg-primary/90">
-                  <Link to="/contact">Get A Free Quote</Link>
-                </Button>
-              <Button size="lg" variant="outline" asChild>
+          <div className="text-center max-w-5xl mx-auto animate-fade-in">
+            <Badge className="mb-8 bg-primary/10 text-primary border-primary/20 rounded-full px-5 py-1.5 text-sm font-medium">
+              <Zap className="h-4 w-4 mr-2 text-primary" />
+              Build Faster. Launch Smarter. Scale Immediately.
+            </Badge>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
+              Transform Your Online<br />
+              Presence Within{" "}
+              <span className="gradient-text">7 Days</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto font-light">
+              Get a professional, fast, high-converting website — fully optimised for every device.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 rounded-full px-8 h-12 text-base">
+                <Link to="/contact">Get A Free Quote</Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild className="rounded-full px-8 h-12 text-base">
                 <Link to="/contact">Book Discovery Call</Link>
               </Button>
-              </div>
             </div>
-            <div className="animate-fade-in lg:block hidden" style={{animationDelay: "200ms"}}>
-              <img 
-                src={heroPhone} 
-                alt="Modern website design showcase" 
-                className="w-full h-auto object-contain drop-shadow-2xl"
-              />
-            </div>
+          </div>
+          {/* Devices hero image - Apple style full width */}
+          <div className="max-w-6xl mx-auto animate-fade-in" style={{ animationDelay: "300ms" }}>
+            <img 
+              src={heroDevices} 
+              alt="Website designs showcased on iPhone 16, iPad, and MacBook — fully optimised for every device" 
+              className="w-full h-auto object-contain drop-shadow-2xl"
+            />
           </div>
         </div>
       </section>
 
-      {/* Problem/Solution Blocks */}
-      <section className="py-20">
+      {/* Problem/Solution - Apple style clean grid */}
+      <section className="py-24 lg:py-32">
         <div className="container mx-auto px-4 lg:px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold mb-5 tracking-tight">
               We Solve Your Biggest Challenges
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">
               Transform problems into opportunities with our expertise
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {problems.map((item, index) => (
-              <Card key={index} className="hover-lift animate-fade-in-up" style={{animationDelay: `${index * 200}ms`}}>
-                <CardContent className="p-6">
-                  <div className="text-center">
-                    <h3 className="text-lg font-semibold text-foreground mb-4">
-                      {item.problem}
-                    </h3>
-                    <div className="w-12 h-px bg-gradient-to-r from-primary to-primary/50 mx-auto mb-4"></div>
-                    <p className="text-primary font-medium">
-                      {item.solution}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+              <div key={index} className="glass-card p-8 text-center animate-fade-in-up" style={{animationDelay: `${index * 150}ms`}}>
+                <h3 className="text-lg font-semibold text-foreground mb-4">
+                  {item.problem}
+                </h3>
+                <div className="w-10 h-px bg-gradient-to-r from-primary to-primary/50 mx-auto mb-4"></div>
+                <p className="text-primary font-medium text-sm">
+                  {item.solution}
+                </p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Packages Preview */}
-      <section className="py-20 bg-muted/30">
+      {/* Packages - Apple style pricing */}
+      <section className="py-24 lg:py-32">
         <div className="container mx-auto px-4 lg:px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold mb-5 tracking-tight">
               Choose Your Perfect Package
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground font-light">
               Affordable solutions for every business size
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {packages.map((pkg, index) => (
-              <Card key={index} className={`hover-lift animate-scale-in relative ${pkg.popular ? 'border-primary shadow-lg' : ''}`} style={{animationDelay: `${index * 200}ms`}}>
+              <div key={index} className={`glass-card p-6 relative animate-scale-in ${pkg.popular ? 'ring-2 ring-primary' : ''}`} style={{animationDelay: `${index * 100}ms`}}>
                 {pkg.popular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary">
+                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary rounded-full px-4">
                     Most Popular
                   </Badge>
                 )}
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">{pkg.name}</CardTitle>
-                  <div className="text-3xl font-bold text-primary">{pkg.price}</div>
-                  <CardDescription>{pkg.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {pkg.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <Check className="h-4 w-4 text-green-600 mr-2" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className="w-full mt-6" variant={pkg.popular ? "default" : "outline"} asChild>
-                    <Link to="/services">Choose Plan</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+                <div className="text-center mb-6 pt-2">
+                  <h3 className="text-xl font-semibold mb-1">{pkg.name}</h3>
+                  <div className="text-3xl font-bold text-primary mb-1">{pkg.price}</div>
+                  <p className="text-sm text-muted-foreground">{pkg.description}</p>
+                </div>
+                <ul className="space-y-3 mb-6">
+                  {pkg.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <Check className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button className={`w-full rounded-full ${pkg.popular ? '' : ''}`} variant={pkg.popular ? "default" : "outline"} asChild>
+                  <Link to="/services">Choose Plan</Link>
+                </Button>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-muted/30">
+      {/* Testimonials - Apple style cards */}
+      <section className="py-24 lg:py-32">
         <div className="container mx-auto px-4 lg:px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold mb-5 tracking-tight">
               What Our Clients Say
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground font-light">
               Real feedback from real businesses
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="hover-lift animate-fade-in-up" style={{animationDelay: `${index * 200}ms`}}>
-                <CardContent className="p-6">
-                  <blockquote className="text-lg mb-4">
-                    "{testimonial.quote}"
-                  </blockquote>
-                  <div className="border-t pt-4">
-                    <div className="font-semibold">{testimonial.author}</div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div key={index} className="glass-card p-8 animate-fade-in-up" style={{animationDelay: `${index * 150}ms`}}>
+                <blockquote className="text-base mb-6 leading-relaxed">
+                  "{testimonial.quote}"
+                </blockquote>
+                <div className="border-t border-border/50 pt-4">
+                  <div className="font-semibold text-sm">{testimonial.author}</div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
+      {/* CTA Section - Apple minimal */}
+      <section className="py-24 lg:py-32">
         <div className="container mx-auto px-4 lg:px-6 text-center">
           <div className="max-w-3xl mx-auto animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business?
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
+              Ready to Transform<br />Your Business?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-muted-foreground mb-10 font-light">
               Join our growing family of successful businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-primary hover:bg-primary/90">
+              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 rounded-full px-8 h-12 text-base">
                 <Link to="/contact">Start Your Project</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" asChild className="rounded-full px-8 h-12 text-base">
                 <Link to="/about">Learn More</Link>
               </Button>
             </div>
