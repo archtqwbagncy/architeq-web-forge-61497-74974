@@ -167,16 +167,18 @@ const Index = () => {
       <section className="py-24 lg:py-32">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="text-center mb-20">
-            <Badge className="mb-4 bg-yellow-400/10 text-yellow-500 border-yellow-400/20 rounded-full px-5 py-1.5 text-sm font-medium">
-              <Star className="h-4 w-4 mr-1 fill-yellow-400 text-yellow-400" />
-              5-Star Rated on Google
-            </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-5 tracking-tight">
               What Our Clients Say
             </h2>
             <p className="text-xl text-muted-foreground font-light">
               Real feedback from real businesses
             </p>
+            <div className="flex items-center justify-center gap-1 mt-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+              ))}
+              <span className="ml-2 text-sm text-muted-foreground font-medium">5.0 on Google</span>
+            </div>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {testimonials.map((testimonial, index) => (
