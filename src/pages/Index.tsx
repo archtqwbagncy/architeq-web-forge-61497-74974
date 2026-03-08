@@ -167,6 +167,10 @@ const Index = () => {
       <section className="py-24 lg:py-32">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="text-center mb-20">
+            <Badge className="mb-4 bg-yellow-400/10 text-yellow-500 border-yellow-400/20 rounded-full px-5 py-1.5 text-sm font-medium">
+              <Star className="h-4 w-4 mr-1 fill-yellow-400 text-yellow-400" />
+              5-Star Rated on Google
+            </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-5 tracking-tight">
               What Our Clients Say
             </h2>
