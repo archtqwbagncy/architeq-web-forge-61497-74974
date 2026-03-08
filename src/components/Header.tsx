@@ -24,26 +24,31 @@ const Header = () => {
   const logoSrc = theme === "dark" ? "/logo-dark.png" : "/logo-light.png";
 
   return (
-    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b">
+    <header className="sticky top-0 z-50" style={{
+      background: 'hsl(var(--glass-bg))',
+      backdropFilter: 'blur(20px) saturate(180%)',
+      WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+      borderBottom: '1px solid hsl(var(--glass-border))',
+    }}>
       <nav className="container mx-auto px-4 lg:px-6">
-        <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-2 hover-lift">
+        <div className="flex justify-between items-center h-14">
+          <Link to="/" className="flex items-center space-x-2">
             <img 
               src={logoSrc}
               alt="Architeq Web Agency" 
-              className="h-10 w-auto object-contain"
-              style={{ maxWidth: '200px' }}
+              className="h-8 w-auto object-contain"
+              style={{ maxWidth: '180px' }}
             />
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-7">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-xs font-medium transition-colors hover:text-foreground ${
                   isActive(item.href)
-                    ? "text-primary"
+                    ? "text-foreground"
                     : "text-muted-foreground"
                 }`}
               >
@@ -52,9 +57,9 @@ const Header = () => {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3">
             <ModeToggle />
-            <Button asChild className="bg-primary hover:bg-primary/90">
+            <Button asChild className="bg-primary hover:bg-primary/90 rounded-full px-5 h-8 text-xs">
               <Link to="/contact">Get Started</Link>
             </Button>
           </div>
@@ -65,21 +70,21 @@ const Header = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-muted-foreground hover:text-foreground"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t animate-fade-in">
-            <div className="flex flex-col space-y-2">
+          <div className="md:hidden py-4 border-t border-border/30 animate-fade-in">
+            <div className="flex flex-col space-y-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary rounded-md ${
+                  className={`px-3 py-2.5 text-sm font-medium transition-colors hover:text-primary rounded-xl ${
                     isActive(item.href)
-                      ? "text-primary bg-primary/10"
+                      ? "text-primary bg-primary/5"
                       : "text-muted-foreground"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
@@ -88,7 +93,7 @@ const Header = () => {
                 </Link>
               ))}
               <div className="pt-2">
-                <Button asChild className="w-full bg-primary hover:bg-primary/90">
+                <Button asChild className="w-full bg-primary hover:bg-primary/90 rounded-full">
                   <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                     Get Started
                   </Link>
