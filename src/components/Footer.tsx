@@ -59,7 +59,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/architeqwebagency/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                <a href="https://www.instagram.com/architeqwebagency/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-foreground transition-colors">
+                  <Instagram className="h-4 w-4" />
                   Instagram
                 </a>
               </li>
