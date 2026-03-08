@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "@/components/ThemeProvider";
+import { Instagram } from "lucide-react";
 
 const Footer = () => {
   const { theme } = useTheme();
