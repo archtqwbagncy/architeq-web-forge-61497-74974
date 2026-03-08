@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, ArrowRight, Zap } from "lucide-react";
-import heroDevices from "@/assets/hero-devices.png";
+import heroPhone from "@/assets/hero-phone.png";
 
 const Index = () => {
   const problems = [
