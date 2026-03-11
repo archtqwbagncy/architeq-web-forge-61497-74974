@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Zap } from "lucide-react";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { fadeUp } from "@/lib/animations";
 
 const Portfolio = () => {
   const projects = [
@@ -12,85 +13,79 @@ const Portfolio = () => {
     { name: "Home of Accounting Consulting", image: "/portfolio/hac-accounting.png", category: "Finance", timeline: "2 days", cost: "R5,000" },
     { name: "GT Testing Civil & Construction", image: "/portfolio/gt-testing.png", category: "Construction & Testing", timeline: "3 days", cost: "R5,000" },
     { name: "BlueEdge Designs", image: "/portfolio/blueedge-designs.png", category: "Design Agency", timeline: "1 day", cost: "R2,000" },
-    { name: "KTL Makeup Glam", image: "/portfolio/ktl-makeup-glam.png", category: "Beauty & Makeup", timeline: "1 day", cost: "R2,500 (custom request)" },
+    { name: "KTL Makeup Glam", image: "/portfolio/ktl-makeup-glam.png", category: "Beauty & Makeup", timeline: "1 day", cost: "R2,500" },
     { name: "Katthales Holdings", image: "/portfolio/katthales-holdings.png", category: "Cleaning Services", timeline: "3 days", cost: "R5,000" },
     { name: "MusicEar", image: "/portfolio/musicear.png", category: "Entertainment & Events", timeline: "1 day", cost: "R2,000" },
-    { name: "Netshifhefhe Attorneys", image: "/portfolio/netshifhefhe-attorneys.png", category: "Legal Services", timeline: "4 days", cost: "R7,000 (custom request)" },
+    { name: "Netshifhefhe Attorneys", image: "/portfolio/netshifhefhe-attorneys.png", category: "Legal Services", timeline: "4 days", cost: "R7,000" },
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="hero-gradient py-24 lg:py-36">
-        <div className="container mx-auto px-4 lg:px-6 text-center max-w-4xl mx-auto animate-fade-in">
-          <Badge className="mb-8 bg-primary/10 text-primary border-primary/20 rounded-full px-5 py-1.5">
-            <Zap className="h-4 w-4 mr-2" />
-            Our Work
-          </Badge>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-            Our <span className="gradient-text">Portfolio</span>
-          </h1>
-          <p className="text-xl text-muted-foreground mb-10 font-light max-w-3xl mx-auto">
-            Real websites we've built for real businesses. See how we've helped our clients establish a powerful online presence.
-          </p>
-          <Button size="lg" asChild className="bg-primary hover:bg-primary/90 rounded-full px-8 h-12">
-            <Link to="/contact">Start Your Project</Link>
-          </Button>
+      <section className="relative py-28 lg:py-40 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 right-[20%] w-[500px] h-[500px] bg-primary/8 rounded-full blur-[120px]" />
+        </div>
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <motion.div initial="hidden" animate="visible" variants={fadeUp} className="max-w-4xl">
+            <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4 block">Our Work</span>
+            <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight leading-[0.95] mb-8">
+              Our
+              <br />
+              <span className="gradient-text">Portfolio</span>
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-10">
+              Real websites we've built for real businesses. See how we've helped our clients establish a powerful online presence.
+            </p>
+            <Button asChild className="rounded-full h-12 px-7 text-sm font-medium bg-foreground text-background hover:bg-foreground/90 gap-2">
+              <Link to="/contact">Start Your Project <ArrowUpRight className="h-3.5 w-3.5" /></Link>
+            </Button>
+          </motion.div>
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section className="py-24 lg:py-32">
-        <div className="container mx-auto px-4 lg:px-6">
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <section className="py-24 lg:py-36 border-t border-border/30">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
             {projects.map((project, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="glass-card overflow-hidden group animate-fade-in-up"
-                style={{ animationDelay: `${index * 80}ms` }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                custom={index % 2}
+                className="group rounded-3xl overflow-hidden border border-border/30 hover:border-primary/20 transition-all duration-500"
               >
-                <div className="overflow-hidden bg-muted/20">
+                <div className="overflow-hidden bg-muted/20 aspect-[16/10]">
                   <img
                     src={project.image}
-                    alt={`${project.name} website screenshot`}
-                    className="w-full max-h-[400px] object-contain object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                    alt={`${project.name} website`}
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>
-                <div className="p-6">
-                  <Badge className="mb-3 bg-primary/10 text-primary border-primary/20 rounded-full text-xs">
-                    {project.category}
-                  </Badge>
-                  <h3 className="text-lg font-semibold mb-2">{project.name}</h3>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <span><strong className="text-foreground">Timeline:</strong> {project.timeline}</span>
-                    <span><strong className="text-foreground">Cost:</strong> {project.cost}</span>
+                <div className="p-5 flex items-center justify-between">
+                  <div>
+                    <div className="flex items-center gap-3 mb-1">
+                      <h3 className="font-semibold text-sm">{project.name}</h3>
+                      <span className="text-[10px] font-medium rounded-full bg-muted px-2.5 py-0.5 text-muted-foreground">
+                        {project.category}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                      <span>{project.timeline}</span>
+                      <span>·</span>
+                      <span>{project.cost}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-center h-9 w-9 rounded-full border border-border/50 group-hover:bg-foreground group-hover:text-background transition-all duration-300">
+                    <ArrowUpRight className="h-4 w-4" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24 lg:py-32">
-        <div className="container mx-auto px-4 lg:px-6 text-center">
-          <div className="max-w-3xl mx-auto animate-fade-in">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
-              Ready to Join Our Portfolio?
-            </h2>
-            <p className="text-xl text-muted-foreground mb-10 font-light">
-              Let's build something amazing for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 rounded-full px-8 h-12">
-                <Link to="/contact">Get A Free Quote</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild className="rounded-full px-8 h-12">
-                <Link to="/services">View Our Services</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
