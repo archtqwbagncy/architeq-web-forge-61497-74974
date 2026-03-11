@@ -3,14 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Check, Calendar, Users, Settings, Phone, Zap, ArrowUpRight, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number = 0) => ({
-    opacity: 1, y: 0,
-    transition: { duration: 0.7, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] },
-  }),
-};
+import { fadeUp } from "@/lib/animations";
 
 const WebDesign = () => {
   const packages = [

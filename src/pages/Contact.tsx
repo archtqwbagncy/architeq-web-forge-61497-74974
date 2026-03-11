@@ -7,14 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 import { ArrowUpRight, Phone, Mail, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number = 0) => ({
-    opacity: 1, y: 0,
-    transition: { duration: 0.7, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] },
-  }),
-};
+import { fadeUp } from "@/lib/animations";
 
 const Contact = () => {
   const { toast } = useToast();
