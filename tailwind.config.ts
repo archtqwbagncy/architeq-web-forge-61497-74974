@@ -104,7 +104,7 @@ export default {
 				'slide-in': 'slide-in 0.5s ease-out',
 			},
 			fontFamily: {
-				sans: ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', 'sans-serif'],
+				sans: ['Sora', '-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'sans-serif'],
 			},
 		}
 	},

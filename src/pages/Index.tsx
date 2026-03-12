@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, ArrowRight, Check, Star, Globe, Palette, Smartphone, Zap } from "lucide-react";
+import heroLaptop from "@/assets/hero-laptop.png";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/animations";
 
@@ -76,77 +77,91 @@ const Index = () => {
         </div>
 
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={fadeUp}
+                custom={0}
+                className="mb-8"
+              >
+                <span className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-muted/50 px-4 py-1.5 text-xs font-medium text-muted-foreground">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+                  Build Faster. Launch Smarter. Scale Immediately.
+                </span>
+              </motion.div>
+
+              <motion.h1
+                initial="hidden"
+                animate="visible"
+                variants={fadeUp}
+                custom={1}
+                className="text-4xl md:text-6xl lg:text-[4.5rem] font-bold tracking-tight leading-[1] mb-8"
+              >
+                Transform Your
+                <br />
+                Online Presence
+                <br />
+                Within{" "}
+                <span className="gradient-text">7 Days</span>
+              </motion.h1>
+
+              <motion.p
+                initial="hidden"
+                animate="visible"
+                variants={fadeUp}
+                custom={2}
+                className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
+              >
+                Get a professional, fast, high-converting website — fully optimised for every device.
+              </motion.p>
+
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={fadeUp}
+                custom={3}
+                className="flex flex-wrap gap-4"
+              >
+                <Button
+                  asChild
+                  size="lg"
+                  className="rounded-full h-12 px-7 text-sm font-medium bg-foreground text-background hover:bg-foreground/90 gap-2"
+                >
+                  <Link to="/contact">
+                    Get started
+                    <span className="flex items-center justify-center h-7 w-7 rounded-full bg-primary text-primary-foreground ml-1">
+                      <ArrowUpRight className="h-3.5 w-3.5" />
+                    </span>
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full h-12 px-7 text-sm font-medium gap-2"
+                >
+                  <Link to="/portfolio">
+                    View our work
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </div>
+
             <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp}
-              custom={0}
-              className="mb-8"
-            >
-              <span className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-muted/50 px-4 py-1.5 text-xs font-medium text-muted-foreground">
-                <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-                Build Faster. Launch Smarter. Scale Immediately.
-              </span>
-            </motion.div>
-
-            <motion.h1
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp}
-              custom={1}
-              className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight leading-[0.95] mb-8"
-            >
-              BRING YOUR
-              <br />
-              IDEAS TO LIFE
-              <br />
-              WITH OUR{" "}
-              <span className="gradient-text">CREATIVE</span>
-              <br />
-              <span className="gradient-text">MAGIC</span>
-            </motion.h1>
-
-            <motion.p
               initial="hidden"
               animate="visible"
               variants={fadeUp}
               custom={2}
-              className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
+              className="hidden lg:block"
             >
-              Our creative team gets to work, crafting a custom design that's not only beautiful but functional. We develop your website using the latest technologies and best practices.
-            </motion.p>
-
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp}
-              custom={3}
-              className="flex flex-wrap gap-4"
-            >
-              <Button
-                asChild
-                size="lg"
-                className="rounded-full h-12 px-7 text-sm font-medium bg-foreground text-background hover:bg-foreground/90 gap-2"
-              >
-                <Link to="/contact">
-                  Get started
-                  <span className="flex items-center justify-center h-7 w-7 rounded-full bg-primary text-primary-foreground ml-1">
-                    <ArrowUpRight className="h-3.5 w-3.5" />
-                  </span>
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="rounded-full h-12 px-7 text-sm font-medium gap-2"
-              >
-                <Link to="/portfolio">
-                  View our work
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
+              <img
+                src={heroLaptop}
+                alt="Architeq portfolio website displayed on a laptop"
+                className="w-full max-w-[600px] mx-auto drop-shadow-2xl"
+              />
             </motion.div>
           </div>
         </div>
