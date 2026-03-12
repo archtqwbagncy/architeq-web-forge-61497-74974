@@ -64,6 +64,20 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/645c0363-cd9c-469f-9e9f-9f4cfa6d16f0) and click on Share -> Publish.
 
+### Deploying to Cloudflare Pages
+
+1. Create a new project in Cloudflare Pages and connect this GitHub repository.
+2. Build settings:
+   - Build command: `npm run build`
+   - Output directory: `dist`
+   - Node version: use the version in `.node-version`
+3. Environment variables (Production & Preview):
+   - `VITE_EMAILJS_PUBLIC_KEY`
+   - `VITE_EMAILJS_SERVICE_ID`
+   - `VITE_EMAILJS_TEMPLATE_ID`
+4. SPA routing is handled by `public/_redirects` which routes all paths to `index.html`.
+5. Push to `main` to trigger automatic deploys.
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!

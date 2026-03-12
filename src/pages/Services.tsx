@@ -37,7 +37,9 @@ const Services = () => {
                 <Link to="/contact">Get Started Today <ArrowUpRight className="h-3.5 w-3.5" /></Link>
               </Button>
               <Button asChild variant="outline" className="rounded-full h-12 px-7 text-sm font-medium gap-2">
-                <Link to="/portfolio">View Our Work <ArrowRight className="h-4 w-4" /></Link>
+                <a href="https://www.instagram.com/architeqwebagency/" target="_blank" rel="noopener noreferrer">
+                  See Our Work <ArrowRight className="h-4 w-4" />
+                </a>
               </Button>
             </div>
           </motion.div>

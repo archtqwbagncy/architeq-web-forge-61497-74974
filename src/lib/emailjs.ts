@@ -1,7 +1,7 @@
 import emailjs from '@emailjs/browser';
 
 // Initialize EmailJS with your public key
-emailjs.init("YOUR_PUBLIC_KEY");
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "");
 
 export const sendEmail = async (formData: {
   name: string;
@@ -11,14 +11,14 @@ export const sendEmail = async (formData: {
 }) => {
   try {
     const response = await emailjs.send(
-      "YOUR_SERVICE_ID", // Email service ID
-      "YOUR_TEMPLATE_ID", // Email template ID
+      import.meta.env.VITE_EMAILJS_SERVICE_ID || "",
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "",
       {
         from_name: formData.name,
         from_email: formData.email,
         service: formData.service,
         message: formData.message,
-        to_email: "architeqwebagency@gmail.com", // Your email address
+        to_email: "architeqwebagency@gmail.com",
       }
     );
     return { success: true, response };

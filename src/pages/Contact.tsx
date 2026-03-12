@@ -27,13 +27,31 @@ const Contact = () => {
     }
     setIsSubmitting(true);
     try {
-      const response = await fetch("https://formspree.io/f/xzzgdqjb", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(formData) });
-      if (response.ok) {
+      const { sendEmail } = await import("@/lib/emailjs");
+      const result = await sendEmail({
+        name: formData.name,
+        email: formData.email,
+        service: formData.service,
+        message: formData.message,
+      });
+
+      if (result.success) {
         toast({ title: "Message Sent!", description: "Thank you for your message. We'll get back to you within 24 hours." });
-        setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-      } else { throw new Error("Failed"); }
-    } catch { toast({ title: "Error", description: "Failed to send message. Please try again or contact us directly.", variant: "destructive" }); }
-    finally { setIsSubmitting(false); }
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch {
+      toast({ title: "Error", description: "Failed to send message. Please try again or contact us directly.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => setFormData(prev => ({ ...prev, [field]: value }));
