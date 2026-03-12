@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, ArrowRight, Check, Star, Globe, Palette, Smartphone, Zap } from "lucide-react";
+import heroLaptop from "@/assets/hero-laptop.png";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/animations";
 
