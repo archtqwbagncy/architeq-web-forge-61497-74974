@@ -256,7 +256,6 @@ const Index = () => {
                 <span className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-muted/50 px-4 py-1.5 text-xs font-medium text-muted-foreground">
                   Our Services
                 </span>
-                <span className="text-xs text-muted-foreground">2025</span>
               </div>
               <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-foreground text-background mb-8">
                 <ArrowUpRight className="h-6 w-6" />
