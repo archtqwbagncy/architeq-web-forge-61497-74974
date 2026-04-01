@@ -18,7 +18,7 @@ export const sendEmail = async (formData: {
         from_email: formData.email,
         service: formData.service,
         message: formData.message,
-        to_email: "architeqwebagency@gmail.com",
+        to_email: "admin@architeq.co.za",
       }
     );
     return { success: true, response };

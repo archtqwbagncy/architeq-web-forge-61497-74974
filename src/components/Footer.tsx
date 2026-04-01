@@ -96,7 +96,7 @@ const Footer = () => {
             <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4">Contact</h4>
             <ul className="space-y-3 text-sm text-foreground/70">
               <li><a href="tel:0694900189" className="hover:text-foreground transition-colors">069 490 0189</a></li>
-              <li><a href="mailto:architeqwebagency@gmail.com" className="hover:text-foreground transition-colors break-all">architeqwebagency@gmail.com</a></li>
+              <li><a href="mailto:admin@architeq.co.za" className="hover:text-foreground transition-colors break-all">admin@architeq.co.za</a></li>
               <li className="flex items-center gap-4 pt-2">
                 {links.social.map((s) => (
                   <a key={s.name} href={s.href} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">

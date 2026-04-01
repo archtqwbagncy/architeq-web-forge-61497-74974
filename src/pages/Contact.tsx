@@ -58,7 +58,7 @@ const Contact = () => {
 
   const contactMethods = [
     { icon: <Phone className="h-5 w-5" />, title: "Phone", value: "069 490 0189", link: "tel:0694900189", desc: "Call us for immediate assistance" },
-    { icon: <Mail className="h-5 w-5" />, title: "Email", value: "architeqwebagency@gmail.com", link: "mailto:architeqwebagency@gmail.com", desc: "Send us a detailed message" },
+    { icon: <Mail className="h-5 w-5" />, title: "Email", value: "admin@architeq.co.za", link: "mailto:admin@architeq.co.za", desc: "Send us a detailed message" },
     { icon: <MessageCircle className="h-5 w-5" />, title: "WhatsApp", value: "Chat with us", link: "https://wa.me/27694900189", desc: "Quick questions and updates" },
   ];
 
