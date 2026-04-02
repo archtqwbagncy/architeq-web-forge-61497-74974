@@ -157,23 +157,12 @@ const Index = () => {
               custom={2}
               className="hidden lg:block"
             >
-              <div className="w-full max-w-[560px] mx-auto">
-                {/* Laptop screen */}
-                <div className="relative rounded-t-xl border-[10px] border-foreground/90 bg-foreground/90 shadow-2xl">
-                  <div className="absolute top-[-6px] left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-muted/30" />
-                  <div className="rounded-[4px] overflow-hidden aspect-[16/10]">
-                    <img
-                      src={heroLaptop}
-                      alt="GT Testing website displayed on a laptop"
-                      className="w-full h-full object-cover object-top"
-                    />
-                  </div>
-                </div>
-                {/* Laptop base */}
-                <div className="relative mx-auto">
-                  <div className="h-3 bg-gradient-to-b from-foreground/80 to-foreground/70 rounded-b-md mx-[10%]" />
-                  <div className="h-1.5 bg-foreground/60 rounded-b-lg mx-[5%]" />
-                </div>
+              <div className="relative w-full max-w-[750px] mx-auto transform hover:scale-[1.02] transition-transform duration-1000">
+                <img
+                  src={heroLaptop}
+                  alt="Architeq Premium Web Solutions"
+                  className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
+                />
               </div>
             </motion.div>
           </div>
